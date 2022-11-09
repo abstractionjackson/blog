@@ -1,0 +1,10 @@
+<nav style="display: flex; margin: 1rem;">
+    <a href="/">
+        <img src="/icons/home.svg" alt="home" class="icon" id="home">
+    </a>
+    <ul style="flex-direction: row;">
+        {{ range $k, $v := .Site.Taxonomies.categories }}
+        <a href="/categories/{{ $k | urlize }}">{{ $k | title }}</a>
+        {{ end }}
+    </ul>
+</nav>
