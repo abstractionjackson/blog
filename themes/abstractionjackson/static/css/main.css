@@ -2,11 +2,14 @@ ul {
     display: flex;
     flex-direction: column;
 }
-html {
+html, body {
     font-family: Arial, Helvetica, sans-serif;
+    color: slategray;
+    line-height: 2;
+    background-color: #f4f4f4;
 }
 a {
-    color: cornflowerblue;
+    color: inherit;
 }
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
@@ -34,4 +37,12 @@ img.icon {
 }
 nav a {
     margin: 0rem 1rem;
+    font-weight: 700;
+}
+nav a:hover {
+    color: forestgreen;
+}
+nav a.logo {
+    color: tomato;
+    font-size: 2em;
 }

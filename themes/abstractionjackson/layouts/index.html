@@ -1,15 +1,16 @@
 {{ define "main" }}
 <main style="max-width: 48rem; margin: 1rem; padding: 0rem 1rem;">
-    <header>
+    <header style="color: slategray;">
         <h1 style="margin: 1rem 0rem;">{{ .Params.heading }}</h1>
-        <p style="margin: 1rem 0rem;">{{ .Params.description | markdownify}}</p>
+        <p style="margin: 1rem 0rem; font-style: italic">{{ .Params.description | markdownify}}</p>
     </header>
+    <hr>
     <section>
         <h2>Recent Entries</h2>
         <ul>
             {{ with .Site.GetPage "section" "entry" }}
             {{ range sort .Pages ".Lastmod" "desc" }}
-            <a href="{{ .RelPermalink }}">{{ .Name }}{{.Lastmod}}</a>
+            <a style="text-decoration: underline;" href="{{ .RelPermalink }}">{{ .Name }}</a>
             {{ end }}
             {{ end }}
         </ul>

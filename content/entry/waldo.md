@@ -1,5 +1,5 @@
 +++
 title = 'Waldo'
-categories = []
-tags = []
+categories = ['professional']
+tags = ['employment', 'contract', 'experience', 'resume']
 +++

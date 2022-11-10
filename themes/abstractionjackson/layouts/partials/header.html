@@ -1,0 +1,11 @@
+<nav style="display: flex; margin: 1rem; align-items: baseline">
+    <a href="/" class="logo">
+        J.
+    </a>
+    {{ with resources.Get "resume.pdf" }}
+    <a href="{{ .RelPermalink }}" class="external">
+        Resume
+        <img src="/icons/download.svg" alt="" class="icon">
+    </a>
+    {{ end }}
+</nav>
