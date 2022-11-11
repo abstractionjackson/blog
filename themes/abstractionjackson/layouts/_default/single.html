@@ -1,5 +1,8 @@
 {{ define "main" }}
-<main class="entry" style="padding: 0rem 1rem; max-width: 66rem;">
-    {{ .Content }}
+<main class="entry" style="padding: 0rem 2rem; max-width: 66rem;">
+    <h1 class="title">{{ .Title }}</h1>
+    <section class="content">
+        {{ .Content }}
+    </section>
 </main>
 {{ end }}

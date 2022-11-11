@@ -1,5 +1,10 @@
 {{ define "main" }}
-    {{ range .Pages }}
-        <a href="{{ .RelPermalink }}">{{ .Name }}</a>
-    {{ end }}
+<main class="list-page" style="padding: 0rem 2rem;">
+    <h1 class="title">{{ .Name | title }}</h1>
+    <ul class="pages">
+        {{ range .Pages }}
+            <a href="{{ .RelPermalink }}">{{ .Name }}</a>
+        {{ end }}
+    </ul>
+</main>
 {{ end }}

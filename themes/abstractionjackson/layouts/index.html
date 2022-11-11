@@ -8,9 +8,9 @@
     <section>
         <h2>Recent Entries</h2>
         <ul>
-            {{ with .Site.GetPage "section" "entry" }}
-            {{ range sort .Pages ".Lastmod" "desc" }}
-            <a style="text-decoration: underline;" href="{{ .RelPermalink }}">{{ .Name }}</a>
+            {{ range sort .Site.Pages ".Lastmod" "desc" }}
+            {{ if eq .Kind "page" }}
+            <a style="text-decoration: underline;" href="{{ .RelPermalink }}" class="{{ .Type }}">{{ .Name }}</a>
             {{ end }}
             {{ end }}
         </ul>

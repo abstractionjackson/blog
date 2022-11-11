@@ -1,0 +1,13 @@
+[[main]]
+name = 'J.'
+url = '/'
+[main.params]
+class = 'logo'
+[[main]]
+name = 'Resume'
+url = '/resume.pdf'
+[main.params]
+post_icon = 'download'
+[[main]]
+name = "Projects"
+url = '/project'

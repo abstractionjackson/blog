@@ -1,11 +1,24 @@
-<nav style="display: flex; margin: 1rem; align-items: baseline">
-    <a href="{{- site.BaseURL -}}" class="logo">
-        J.
-    </a>
-    {{ with resources.Get "resume.pdf" }}
-    <a href="{{ .RelPermalink }}" class="external">
-        Resume
-        <img src="{{- site.BaseURL -}}/icons/download.svg" alt="" class="icon">
-    </a>
+<header>
+    <nav style="display: flex; margin: 1rem; align-items: baseline">
+        {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="{{with .Params.class}}{{.}}{{end}}">
+            <span class="title">
+                {{ .Name | title }}
+            </span>
+            <span class="post">
+                {{ .Post }}
+            </span>
+            <span class="post-icon">
+                {{ with .Params.post_icon }}
+                <img src="{{ site.BaseURL }}/icons/{{- . -}}.svg" alt="" class="icon">
+                {{ end }}
+            </span>
+        </a>
+        {{ end }}
+    </nav>
+    {{ with .Parent }}
+    <h3 style="padding: 0rem 2rem;">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h3>
     {{ end }}
-</nav>
+</header>

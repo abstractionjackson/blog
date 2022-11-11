@@ -53,3 +53,6 @@ main.entry {
 main.entry li {
     list-style: inside disc;
 }
+main.entry a {
+    text-decoration: underline;
+}
