@@ -46,3 +46,10 @@ nav a.logo {
     color: tomato;
     font-size: 2em;
 }
+/* Entry */
+main.entry {
+
+}
+main.entry li {
+    list-style: inside disc;
+}
