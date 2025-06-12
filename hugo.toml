@@ -3,3 +3,8 @@ languageCode = 'en-us'
 title = 'Abscriptio Digitalis'
 description = 'Abscriptio Digitalis is the personal blog of San Francisco-based software engineer Jackson Galan.'
 theme = 'haven'
+
+[params]
+[params.root]
+url = 'https://abstractionjackson.com'
+title = 'Abstraction Jackson'

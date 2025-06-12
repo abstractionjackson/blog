@@ -1,2 +1,30 @@
-<h1>{{ site.Title }}</h1>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<header class="m-5">
+  <nav>
+    <ul class="root-brand" style="list-style: none">
+      <li>
+        <a href="{{ .Site.Params.root.url }}">
+          {{ with resources.GetMatch
+            "images/root/abstractionjackson-brand-logo.*"
+          }}
+            <img
+              src="{{ .RelPermalink }}"
+              alt="{{ $.Site.Params.root.title }} Logo"
+              style="height: 32px; width: auto" />
+          {{ end }}
+        </a>
+      </li>
+    </ul>
+    <ul class="my-4">
+      <li>
+        <a href="{{ .Site.BaseURL }}">
+          <h1 class="title is-1">{{ .Site.Title }}</h1>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section>
+    <p style="line-height: 1.5">
+      The personal blog of San Francisco software engineer Jackson Galan
+    </p>
+  </section>
+</header>
