@@ -2,7 +2,7 @@ baseURL = 'https://blog.abstractionjackson.com/'
 languageCode = 'en-us'
 title = 'Abscriptio Digitalis'
 description = 'Abscriptio Digitalis is the personal blog of San Francisco-based software engineer Jackson Galan.'
-theme = 'beta'
+theme = 'haven'
 
 [params]
 [params.root]
